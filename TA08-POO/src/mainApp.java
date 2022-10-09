@@ -18,7 +18,7 @@ public class mainApp {
 
 		
 		//Creo un objeto Electrodomestico usando el constructor que recibe todos los datos
-		Electrodomestico lavadora = new Electrodomestico(419.99, Colores.NEGRO , Consumo.A,35.32);
+		Electrodomestico lavadora = new Electrodomestico(419.99, "asdfsdaf" , 'A',35.32);
 		//Muestro sus atributos por pantalla
 		System.out.println("Precio: "+lavadora.getPrecioBase()+", Color: "+lavadora.getColor()+", Consumo: "+lavadora.getConsumoEnergetico()+", Peso: "+lavadora.getPeso());
 		

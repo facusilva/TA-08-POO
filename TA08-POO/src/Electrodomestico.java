@@ -3,17 +3,17 @@ public class Electrodomestico {
 
 	protected double precioBase;
 	
-	protected Colores color;
+	protected String color;
 	
-	protected Consumo consumoEnergetico;
+	protected char consumoEnergetico;
 	
 	protected double peso;
 	
 	private final double PRECIOBASE_DEF = 100.00;
 	
-	private final Colores COLOR_DEF = Colores.BLANCO;
+	private final String COLOR_DEF = "blanco";
 	
-	private final Consumo CONSUMOENERGETICO_DEF = Consumo.F;
+	private final char CONSUMOENERGETICO_DEF = 'F';
 	
 	private final double PESO_DEF = 5.00;
 	
@@ -33,10 +33,10 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
-	public Electrodomestico(double precioBase, Colores color, Consumo consumoEnergetico, double peso) {
+	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
-		this.color = color;
-		this.consumoEnergetico = consumoEnergetico;
+		this.color = comprobarColor(color);
+		this.consumoEnergetico = comprobarConsumo(consumoEnergetico);
 		this.peso = peso;
 	}
 
@@ -48,19 +48,19 @@ public class Electrodomestico {
 		this.precioBase = precioBase;
 	}
 
-	public Colores getColor() {
+	public String getColor() {
 		return color;
 	}
 
-	public void setColor(Colores color) {
+	public void setColor(String color) {
 		this.color = color;
 	}
 
-	public Consumo getConsumoEnergetico() {
+	public char getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
 
-	public void setConsumoEnergetico(Consumo consumoEnergetico) {
+	public void setConsumoEnergetico(char consumoEnergetico) {
 		this.consumoEnergetico = consumoEnergetico;
 	}
 
@@ -72,6 +72,40 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
+	public String comprobarColor(String color) {
+		switch(color.toLowerCase()) {
+		case "blanco":
+			return Colores.BLANCO.color;
+		case "negro":
+			return Colores.NEGRO.color;
+		case "rojo":
+			return Colores.ROJO.color;
+		case "azul":
+			return Colores.AZUL.color;
+		case "gris":
+			return Colores.GRIS.color;
+		default:
+			return Colores.BLANCO.color;
+		}
+	}
 	
+	public char comprobarConsumo(char consumo) {
+		switch(consumo) {
+		case 'A':
+			return Consumo.A.consumo;
+		case 'B':
+			return Consumo.B.consumo;
+		case 'C':
+			return Consumo.C.consumo;
+		case 'D':
+			return Consumo.D.consumo;
+		case 'E':
+			return Consumo.E.consumo;
+		case 'F':
+			return Consumo.F.consumo;
+		default:
+			return Consumo.F.consumo;
+		}
+	}
 	
 }
