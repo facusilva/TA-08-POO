@@ -1,28 +1,31 @@
 
 public class Persona {
 
+	//defino los atributos de la clase
 	private String nombre;
 	
 	private int edad;
 	
 	private String DNI;
 	
-	private Sexo sexo;
+	private char sexo;
 	
 	private double peso;
 	
 	private double altura;
 	
+	//constructor con valores por defecto
 	public Persona() {
 		this.nombre = "";
 		this.edad = 0;
-		this.sexo = Sexo.H;
+		this.sexo = 'H';
 		this.peso = 0.00;
 		this.altura = 0.00;
 		
 	}
 	
-	public Persona(String nombre, int edad, Sexo sexo) {
+	//constructor que recibe por parámetros nombre, edad y sexo, peso y altura tendrán sus valores por defecto
+	public Persona(String nombre, int edad, char sexo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = sexo;
@@ -30,7 +33,8 @@ public class Persona {
 		this.altura = 0.00;
 	}
 	
-	public Persona(String nombre, int edad, String DNI, Sexo sexo, double peso, double altura) {
+	//constructor que recibe todos los datos de la persona
+	public Persona(String nombre, int edad, String DNI, char sexo, double peso, double altura) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.DNI = DNI;
@@ -39,6 +43,7 @@ public class Persona {
 		this.altura = altura;
 	}
 	
+	//GETTERS Y SETTERS
 	public String getNombre() {
 		return nombre;
 	}
@@ -59,11 +64,11 @@ public class Persona {
 		DNI = dNI;
 	}
 
-	public Sexo getSexo() {
+	public char getSexo() {
 		return sexo;
 	}
 
-	public void setSexo(Sexo sexo) {
+	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
 

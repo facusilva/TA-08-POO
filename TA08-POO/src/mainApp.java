@@ -5,7 +5,7 @@ public class mainApp {
 		// TODO Auto-generated method stub
 		
 		//Creo una objeto Persona
-		Persona yo = new Persona("Facundo Silva", 22, "55555555A", Sexo.H, 78.2, 1.74);
+		Persona yo = new Persona("Facundo Silva", 22, "55555555A", 'H', 78.2, 1.74);
 		//Le seteo un nombre, cambiando el asignado mediante el constructor
 		yo.setNombre("Facundo Silva Castillo");
 		//Muestro por pantalla todos los datos de la Persona

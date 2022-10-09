@@ -1,6 +1,7 @@
 
 public class Electrodomestico {
 
+	//defino los atributos de la clase
 	protected double precioBase;
 	
 	protected String color;
@@ -9,6 +10,7 @@ public class Electrodomestico {
 	
 	protected double peso;
 	
+	//defino los valores por defecto
 	private final double PRECIOBASE_DEF = 100.00;
 	
 	private final String COLOR_DEF = "blanco";
@@ -18,7 +20,7 @@ public class Electrodomestico {
 	private final double PESO_DEF = 5.00;
 	
 	
-	
+	//declaro el constructor con los valores por defecto
 	public Electrodomestico() {
 		this.precioBase = PRECIOBASE_DEF;
 		this.color = COLOR_DEF;
@@ -26,6 +28,7 @@ public class Electrodomestico {
 		this.peso = PESO_DEF;
 	}
 	
+	//declaro el constructor que le lelgan preciobase y peso por parámetro y el resto de atributos serán por defecto
 	public Electrodomestico(double precioBase, double peso) {
 		this.precioBase = precioBase;
 		this.color = COLOR_DEF;
@@ -33,6 +36,7 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
+	//declaro el constructor donde le llegan todos los datos por parámetros
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
 		this.color = comprobarColor(color);
@@ -40,6 +44,7 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 
+	//GETTERS Y SETTERS
 	public double getPrecioBase() {
 		return precioBase;
 	}
@@ -72,6 +77,7 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
+	//compruebo el color introducido por el usuario y devuelvo el valor correspondiente establecido por el enum
 	public String comprobarColor(String color) {
 		switch(color.toLowerCase()) {
 		case "blanco":
@@ -89,6 +95,7 @@ public class Electrodomestico {
 		}
 	}
 	
+	//compruebo el consumo introducido por el usuario y devuelvo el valor correspondiente establecido por el enum
 	public char comprobarConsumo(char consumo) {
 		switch(consumo) {
 		case 'A':
